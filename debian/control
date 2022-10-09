@@ -1,0 +1,37 @@
+Source: kcolorpicker
+Section: libs
+Priority: optional
+Maintainer: Boyuan Yang <byang@debian.org>
+Build-Depends:
+ debhelper-compat (= 13),
+ cmake,
+ qtbase5-dev,
+Rules-Requires-Root: no
+Standards-Version: 4.5.1
+Homepage: https://github.com/ksnip/kcolorpicker
+Vcs-Git: https://salsa.debian.org/debian/kcolorpicker.git
+Vcs-Browser: https://salsa.debian.org/debian/kcolorpicker
+
+Package: libkcolorpicker-dev
+Architecture: any
+Multi-Arch: same
+Depends:
+ libkcolorpicker0 (= ${binary:Version}),
+ ${misc:Depends},
+Description: QToolButton-like widget with color selection popup menu (dev)
+ The kColorPicker library provides a QToolButton-like widget with color
+ selection popup menu. This library is used by the ksnip project.
+ .
+ This package provides the development files.
+
+Package: libkcolorpicker0
+Architecture: any
+Multi-Arch: same
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+Description: QToolButton-like widget with color selection popup menu (lib)
+ The kColorPicker library provides a QToolButton-like widget with color
+ selection popup menu. This library is used by the ksnip project.
+ .
+ This package provides the shared library.
